@@ -23,3 +23,10 @@ of course.)
 
     print $forecast->text($zone), "\n";
 
+Required Modules:
+
+        Carp
+        FileHandle
+        LWP::UserAgent
+        Time::Local
+

@@ -1,6 +1,6 @@
 package Bundle::Weather;
 
-$VERSION = '1.0.0';
+$VERSION = '1.0.1';
 
 1;
 __END__
@@ -38,11 +38,11 @@ have to be changed to match your location, of course.)
 
 Weather::WMO
 
+Weather::Product
+
 Weather::PIL
 
 Weather::UGC
-
-Weather::Product
 
 Weather::Product::NWS
 
