@@ -1,0 +1,25 @@
+This bundle contains a collection of modules for processing weather products
+(forecasts, observations, etc.).
+
+The current version only performs the only basic processing of weather
+products. Future versions may include modules for handling and routing
+EMWIN (Emergency Managers Weather Information Network) streams. Or even
+parsing the information into HTML or XML documents. 
+
+Consider this "beta" code. Some of the modules still lack decent PODs
+or even some obvious "features".
+
+Below is a simple program which will fetch the latest state forecast from
+the NWS "Interactive Weather Information Network" server and print it out.
+(The default zone and URL will have to be changed to match your location,
+of course.) 
+
+    require Weather::Product::NWS;
+
+    $zone = shift || 'NYZ079';
+    $file = 'ftp://iwin.nws.noaa.gov/data/text/FPUS61/KOKX.TXT';
+
+    $forecast = new Weather::Product::NWS($file);
+
+    print $forecast->text($zone), "\n";
+
